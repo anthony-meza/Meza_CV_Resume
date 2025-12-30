@@ -6,44 +6,37 @@
 % License: MIT
 %------------------------------------
 
-\documentclass[a4paper, 10pt]{article}
-\usepackage{myresume}  % Style package
+\documentclass[a4paper, 11pt]{article}
+\usepackage{simpleresume}  % Style package
 
 % --------------------  START  --------------------
 \begin{document}
 
 % -------------------- HEADING --------------------
-\headerContact{714-552-2396}{ameza@mit.edu}{anthony-meza.github.io}
-
-\begin{flushleft}
-  \headerName{Anthony Meza} \\
-  \headerTitle{Ph.D. Candidate}
-  \noindent\rule{\textwidth}{0.4pt}
-\end{flushleft}
+\headerContact{(714) 552-2396}{ameza@mit.edu}{anthony-meza.github.io}
+\headerName{Anthony Meza}
+\headerTitle{Ph.D. Candidate}
 
 % -------------------- RESEARCH INTERESTS --------------------
-\sectionBlock{
-\section{Research Interests}
-}{
-\skillListStart
-\justifying
-\hyphenpenalty=10000
-\exhyphenpenalty=10000
-\item My thesis is focused on past and future changes in global ocean circulation, with an emphasis on identifying the driving mechanisms and evaluating their detectability in observational records. Beyond my thesis work, I am broadly interested in all research that combine models and observations to advance our understanding of Earth's global and regional climate systems, particularly problems involving ocean dynamics, climate variability, and long-term climate change.
-\skillListEnd
-}
+% \section{Research Interests}
+
+% \skillListStart
+% \justifying
+% \hyphenpenalty=10000
+% \exhyphenpenalty=10000
+% \item My thesis is focused on past and future changes in global ocean circulation, with an emphasis on identifying the driving mechanisms and evaluating their detectability in observational records. Beyond my thesis work, I am broadly interested in all research that combine models and observations to advance our understanding of Earth's global and regional climate systems, particularly problems involving ocean dynamics, climate variability, and long-term climate change.\\
+% \skillListEnd
 
 % -------------------- EDUCATION --------------------
 \sectionBlock{
 \section{Education}
 }{
 \eduHeading
-  {Massachusetts Institute of Technology \&\\ Woods Hole Oceanographic Institution}{Cambridge \& Woods Hole, MA}
+  {Massachusetts Institute of Technology \&\\ Woods Hole Oceanographic Institution}{Cambridge, MA}
   {Ph.D. in Physical Oceanography}{2021--Present}
 \itemListStart
   \myItem{Advisor: Geoffrey Gebbie}
-  \myItemAlign{Thesis Committee: & Henri Drake, Christopher Piecuch, \\
-                                  & Viviane de Menezes, Raffaele Ferrari}
+  \myItem{Thesis Committee: Henri Drake, Christopher Piecuch, Viviane de Menezes, Raffaele Ferrari}
 \itemListEnd
 
 \eduHeading
@@ -57,7 +50,7 @@
 }{
 \pubListStart
 \justifying
-\item \textbf{Meza, A.}, \& Gebbie, G. (2025). Wind-driven mid-depth Pacific cooling in a dynamically consistent ocean state estimate. \textit{Journal of Geophysical Research: Oceans}, 130(10), e2025JC022462. doi.org/10.1029/2025JC022462
+\pubItem{\textbf{Meza, A.}, \& Gebbie, G. (2025). Wind-driven mid-depth Pacific cooling in a dynamically consistent ocean state estimate. \textit{Journal of Geophysical Research: Oceans}. doi.org/10.1029/2025JC022462}
 % \item \textbf{Meza, A.}, Drake, H. \& Gebbie, G. \textit{(In Prep)}. Projected Changes in Dense Shelf Water and their Abyssal Expression.
 % \item \textbf{Meza, A.}, et al. \textit{(In Prep)}. 
 % Detection of .
@@ -69,35 +62,37 @@
 \sectionBlock{
 \section{Research Experience}
 }{
-\internHeading[Advisor: Geoffrey Gebbie]
+\internHeading[Graduate Research Assistant]
   {Woods Hole Oceanographic Institution}{Woods Hole, MA}{Sep 2021--Present}
 \itemListStart
-  \myItem{Explored causes of deep ocean cooling using MITgcm simulations, supporting NASA efforts of global ocean modeling and data assimilation.}
-  \myItem{Analyzed 15TB+ of next-generation high-resolution coupled climate model output to understand the connections between ocean circulation and dissolved chemicals in the ocean.}
-  \myItem{Produced written reports, posters and presentations to communicate findings to broader communities.}
+  \myItem{Tested causes of deep ocean cooling using global MITgcm simulations, supporting NASA efforts of global ocean modeling and data assimilation.}
+  \myItem{Analyzed 40TB+ of high-resolution coupled climate model output to understand the connections between ocean circulation and dissolved chemicals in the ocean.}
+  \myItem{Produced written reports, posters, and presentations to communicate findings to broader communities.}
 \itemListEnd
 
-\internHeading[Advisor: Hyodae Seo]
+\internHeading[Research Assistant]
   {Woods Hole Oceanographic Institution}{Woods Hole, MA}{Sep 2021--Sep 2023}
 \itemListStart
-  \myItem{Processed and analyzed 3TB+ of high-resolution climate data and found significant connections between near-shore sea surface temperature and extreme California precipitation events.}
+  \myItem{Processed and analyzed 5TB+ of high-resolution ocean reanalysis data and found significant connections between near-shore sea surface temperature and extreme California precipitation events.}
   \myItem{Developed tools to analyze big climate data using Python and Julia.}
 \itemListEnd
 
-\internHeading[Advisor: Mark Petersen]
+\internHeading[Summer Intern]
   {Los Alamos National Laboratory}{Los Alamos, NM}{Jun 2021--Aug 2021}
 \itemListStart
   \myItem{Implemented reduced-precision capabilities within the ocean component of the Energy Exascale Earth System Model.}
   \myItem{Found that reduced precision significantly reduced compute time but at cost of model skill.}
 \itemListEnd
 
-\internHeading[Advisor: Thomas Merkh]
+\internHeading[Summer Intern]
   {Institute for Pure and Applied Mathematics}{Los Angeles, CA}{Jun 2020--Sep 2020}
 \itemListStart
-  \myItem{Co-developed Q-learning and Deep Q-learning algorithms to improve satellite network communication efficiency for the Aerospace Corporation.}
+    \myItem{Designed and implemented reinforcement learning algorithms for adaptive packet routing in satellite network simulations.}
   \myItem{Empirical models were built in Python primarily using PyTorch and NetworkX.}
 \itemListEnd
 }
+
+
 
 % -------------------- PRESENTATIONS --------------------
 \sectionBlock{
@@ -105,15 +100,26 @@
 }{
 \pubListStart
 \justifying
-\item \textbf{A. Meza}, G. Gebbie. ``Wind-driven mid-depth Pacific cooling in a dynamically consistent ocean state estimate'' ECCO Summer School, 19--30 May 2025, Asilomar Conference Center, Monterey, CA. \textit{Poster}.
-\item \textbf{A. Meza}, P. Bhuyan, Z. Zheng, G. Gebbie., M. Linz, J. Wenegrat. ``Surface to Bottom Connections in Earth's Ocean'' Tracer Mixing in Fluids Across Planetary Scales Summer School, 8--19 Jul 2024, Brin Mathematics Research Center, College Park, MD. \textit{Talk}.
-\item \textbf{A. Meza}, H. Seo. ``Associations Between Coastally Trapped Waves and Wintertime Precipitation in California'' Ocean Sciences Meeting, 18--23 Feb 2024, New Orleans, LA. \textit{Poster}.
-\item \textbf{A. Meza}, H. Seo. ``Associations Between Coastally Trapped Waves and Wintertime Precipitation in California'' Graduate Climate Conference, 1--3 Nov 2023, Marine Biological Laboratory, Woods Hole, MA. \textit{Poster}.
-\item \textbf{A. Meza}, G. Gebbie. ``Drivers of subsurface Pacific cooling in ECCOv4r4'' ECCO Annual Meeting 2023, 25 Jan 2023, University of Washington, Seattle, WA. \textit{Virtual Talk}.
-\item \textbf{A. Meza}, G. Gebbie. ``Drivers of mid-depth Pacific cooling trends in an ocean reanalysis'' AGU Fall Meeting 2022, 2--4 Nov 2023, Chicago, IL. \textit{Poster}.
-\item \textbf{A. Meza}, G. Gebbie. ``Drivers of mid-depth Pacific cooling trends in an ocean reanalysis'' Graduate Climate Conference, 31 Oct 2022, University of Washington, Seattle, WA. \textit{Poster}.
-\item {C. Tran}, \textbf{A. Meza}, H.L. Tung, H. Liu. ``A Reinforcement Learning Approach to Packet Routing on a Dynamic Network'' Joint Mathematics Meeting, 6--9 Jan 2021, Virtual. \textit{Virtual Talk}.
+\pubItem{\textbf{A. Meza}, G. Gebbie. ``Wind-driven mid-depth Pacific cooling in a dynamically consistent ocean state estimate'' ECCO Summer School, 19--30 May 2025, Asilomar Conference Center, Monterey, CA. \textit{Poster}.}
+\pubItem{\textbf{A. Meza}, P. Bhuyan, Z. Zheng, G. Gebbie., M. Linz, J. Wenegrat. ``Surface to Bottom Connections in Earth's Ocean'' Tracer Mixing in Fluids Across Planetary Scales Summer School, 8--19 Jul 2024, Brin Mathematics Research Center, College Park, MD. \textit{Talk}.}
+\pubItem{\textbf{A. Meza}, H. Seo. ``Associations Between Coastally Trapped Waves and Wintertime Precipitation in California'' Ocean Sciences Meeting, 18--23 Feb 2024, New Orleans, LA. \textit{Poster}.}
+\pubItem{\textbf{A. Meza}, H. Seo. ``Associations Between Coastally Trapped Waves and Wintertime Precipitation in California'' Graduate Climate Conference, 1--3 Nov 2023, Marine Biological Laboratory, Woods Hole, MA. \textit{Poster}.}
+\pubItem{\textbf{A. Meza}, G. Gebbie. ``Drivers of subsurface Pacific cooling in ECCOv4r4'' ECCO Annual Meeting 2023, 25 Jan 2023, University of Washington, Seattle, WA. \textit{Virtual Talk}.}
+\pubItem{\textbf{A. Meza}, G. Gebbie. ``Drivers of mid-depth Pacific cooling trends in an ocean reanalysis'' AGU Fall Meeting 2022, 2--4 Nov 2023, Chicago, IL. \textit{Poster}.}
+\pubItem{\textbf{A. Meza}, G. Gebbie. ``Drivers of mid-depth Pacific cooling trends in an ocean reanalysis'' Graduate Climate Conference, 31 Oct 2022, University of Washington, Seattle, WA. \textit{Poster}.}
+\pubItem{{C. Tran}, \textbf{A. Meza}, H.L. Tung, H. Liu. ``A Reinforcement Learning Approach to Packet Routing on a Dynamic Network'' Joint Mathematics Meeting, 6--9 Jan 2021, Virtual. \textit{Virtual Talk}.}
 \pubListEnd
+}
+
+\sectionBlock{
+\section{Teaching Experience}
+}{
+\awardListStart
+\justifying
+\entryItem{Co-organizer and Instructor}{High Performance Computing and Data Analysis Workshop}{2024}
+\entryItem{Calculus Instructor}{MIT-WHOI Joint Program Summer Math Refresher}{2024}
+\entryItem{PDE Instructor}{MIT-WHOI Joint Program Summer Math Refresher}{2023}
+\awardListEnd
 }
 
 % -------------------- SERVICE AND LEADERSHIP --------------------
@@ -122,22 +128,19 @@
 }{
 \awardListStart
 \justifying
-\entryItem{Committee Member}{AMS Committee on Climate Variability and Change}{Nov 2024--Present}
-\entryItem{Graduate Application Mentor}{Joint Program Applicant Support \& Knowledgebase}{Aug 2023--Present}
-\entryItem{Co-organizer and Instructor}{High Performance Computing and Data Analysis Workshop}{Oct 2024}
-\entryItem{Conference Co-Organizer}{2023 Graduate Climate Conference}{Jan 2023--Nov 2023}
-\entryItem{Calculus Instructor}{MIT-WHOI Joint Program Summer Math Refresher}{Jul 2024}
+\entryItem{Committee Member}{AMS Committee on Climate Variability and Change}{2024--Present}
+\entryItem{Graduate Application Mentor}{Joint Program Applicant Support \& Knowledgebase}{2023--Present}
 \entryItem{Physical Oceanography Representative}{WHOI Joint Program Student Representative}{2023--2024}
-\entryItem{PDE Instructor}{MIT-WHOI Joint Program Summer Math Refresher}{Jul 2023}
+\entryItem{Conference Co-Organizer}{2023 Graduate Climate Conference}{2023}
 \entryItem{At-Large Representative}{WHOI Joint Program Student Representative}{2022--2023}
 \entryItem{Conference Co-Organizer}{2022 First Generation Summit}{2022}
 \entryItem{Committee Member}{UC Irvine Mathematics Inclusive Excellence Committee}{2020--2021}
 \awardListEnd
 }
-\newpage
+
 % -------------------- Workshops & Summer Schools --------------------
 \sectionBlock{
-\section{Workshops\\and\\Summer Schools\\Attended}
+\section{Workshops and Summer Schools Attended}
 }{
 \awardListStart
 \justifying
@@ -150,7 +153,7 @@
 
 % -------------------- AWARDS & HONORS --------------------
 \sectionBlock{
-\section{Awards\\and\\Honors\\Received}
+\section{Awards and Honors Received}
 }{
 \awardListStart
 \justifying
@@ -164,14 +167,13 @@
 
 
 % -------------------- SKILLS --------------------
-\sectionBlock{
-\section{Technical Skills}
-}{
-\skillListStart
-\justifying
-\item \emph{Programming Languages}: Python, Julia, MATLAB.
-\item \emph{Developer Tools}: Slurm, Linux/Unix, Git, Github, VS Code, Google Colab.
-\skillListEnd
-}
+% \sectionBlock{
+% \section{Technical Skills}
+% }{
+% \skillListStart
+% \justifying
+% \item \emph{Programming Languages}: Python, Julia, MATLAB.
+% \item \emph{Developer Tools}: Slurm, Unix, Git, Github, VS Code.
+% \skillListEnd
 
 \end{document}

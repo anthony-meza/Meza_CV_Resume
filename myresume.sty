@@ -32,21 +32,21 @@
     ItalicFont=*-Italic,
     BoldItalicFont=*-BoldItalic
     ]
-\newfontfamily\Calluna{Calluna}[
-    Path=./Fonts/Calluna/,
-    Extension = .otf,
-    UprightFont=*-Regular
-    ]
-\newfontfamily\Courier{CourierNew}[
-    Path=./Fonts/Courier/,
-    Extension = .ttf,
-    UprightFont=*-Regular
-    ]
-\newfontfamily\CronosLt{CronosProLT}[
-    Path=./Fonts/Cronos/,
-    Extension = .ttf,
-    UprightFont=*-Regular
-    ]
+% \newfontfamily\Calluna{Calluna}[
+%     Path=./Fonts/Calluna/,
+%     Extension = .otf,
+%     UprightFont=*-Regular
+%     ]
+% \newfontfamily\Courier{CourierNew}[
+%     Path=./Fonts/Courier/,
+%     Extension = .ttf,
+%     UprightFont=*-Regular
+%     ]
+% \newfontfamily\CronosLt{CronosProLT}[
+%     Path=./Fonts/Cronos/,
+%     Extension = .ttf,
+%     UprightFont=*-Regular
+%     ]
 
 % Emph style
 \renewcommand{\emph}[1]{\textbf{\fontsize{11pt}{11pt}\selectfont #1}}
@@ -86,6 +86,21 @@
 \newcommand{\headerTitle}[1]{%
   {\Calluna \fontsize{14.5pt}{14.5pt}\selectfont \textsc{#1}}
 }
+
+\let\oldHeaderName\headerName
+\let\oldHeaderTitle\headerTitle
+
+\makeatletter
+\def\@headerName{}
+\renewcommand{\headerName}[1]{\def\@headerName{#1}}
+\renewcommand{\headerTitle}[1]{%
+  \begin{flushleft}
+    \oldHeaderName{\@headerName} \\
+    \oldHeaderTitle{#1}
+    \noindent\rule{\textwidth}{0.4pt}
+  \end{flushleft}
+}
+\makeatother
 
 \newcommand{\headerContact}[3]{%
   \begin{flushright}
