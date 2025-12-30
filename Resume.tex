@@ -6,97 +6,97 @@
 % License: MIT
 %------------------------------------
 
-\documentclass[a4paper, 10pt]{article}
-\usepackage{jake_style}  % Style package
+\documentclass[a4paper, 11pt]{article}
+\usepackage{simpleresume}  % Style package
 
 % --------------------  START  --------------------
 \begin{document}
 
 % -------------------- HEADING --------------------
-\headerContact{714-552-2396}{ameza@mit.edu}{anthony-meza.github.io}
-
+\headerContact{(714) 552-2396}{ameza@mit.edu}{anthony-meza.github.io}
 \headerName{Anthony Meza}
-  \headerTitle{Ph.D. Candidate}
+\headerTitle{Ph.D. Candidate}
+
+% -------------------- RESEARCH INTERESTS --------------------
+% \section{Research Interests}
+
+% \skillListStart
+% \justifying
+% \hyphenpenalty=10000
+% \exhyphenpenalty=10000
+% \item My thesis is focused on past and future changes in global ocean circulation, with an emphasis on identifying the driving mechanisms and evaluating their detectability in observational records. Beyond my thesis work, I am broadly interested in all research that combine models and observations to advance our understanding of Earth's global and regional climate systems, particularly problems involving ocean dynamics, climate variability, and long-term climate change.\\
+% \skillListEnd
 
 % -------------------- EDUCATION --------------------
-\sectionBlock{
 \section{Education}
-}{
+
 \eduHeading
-  {Massachusetts Institute of Technology \& Woods Hole Oceanographic Institution}{Cambridge \& Woods Hole, MA}
-  {Ph.D. in Physical Oceanography and Climate Science}{2021 - Present}
+  {Massachusetts Institute of Technology \&\\ Woods Hole Oceanographic Institution}{Cambridge, MA}
+  {Ph.D. in Physical Oceanography}{2021--Present}
+\itemListStart
+  \myItem{Advisor: Geoffrey Gebbie}
+  \myItem{Thesis Committee: Henri Drake, Christopher Piecuch, Viviane de Menezes, Raffaele Ferrari}
+\itemListEnd
 
 \eduHeading
   {University of California, Irvine}{Irvine, CA}
-  {B.S. in Mathematics, Concentration in Data Science}{2018 - 2021}
+  {B.S. in Mathematics, Concentration in Data Science}{2018--2021}
 
-}
+% -------------------- PUBLICATIONS --------------------
+\section{Publications}
 
-% -------------------- EXPERIENCE --------------------
-\sectionBlock{
-\section{Experience}
-}{
-\internHeading
-  {Research Assistant, Woods Hole Oceanographic Institution}{Woods Hole, MA}{2021.09 - Present}
+\pubListStart
+\justifying
+\pubItem{\textbf{Meza, A.}, \& Gebbie, G. (2025). Wind-driven mid-depth Pacific cooling in a dynamically consistent ocean state estimate. \textit{Journal of Geophysical Research: Oceans}. doi.org/10.1029/2025JC022462}
+% \item \textbf{Meza, A.}, Drake, H. \& Gebbie, G. \textit{(In Prep)}. Projected Changes in Dense Shelf Water and their Abyssal Expression.
+% \item \textbf{Meza, A.}, et al. \textit{(In Prep)}. 
+% Detection of .
+% \item \textbf{Meza, A.}, Bhuyan, P., Zheng, Z. \& Gebbie, G. \textit{(In Prep)}. Passive and Dynamic Contributions to Mean Ocean Temperature during the Last Glacial Maximum.
+\pubListEnd
+
+% -------------------- RESEARCH EXPERIENCE --------------------
+\section{Research Experience}
+
+\positionHeading[Graduate Research Assistant]
+  {Woods Hole Oceanographic Institution}{Woods Hole, MA}{Sep 2021--Present}
 \itemListStart
-  \myItem{Ran several global ocean simulations using the MITgcm to diagnose the causes of deep ocean cooling in a global data assimilation effort by NASA.}
-  \myItem{Analyzed 15TB+ of next-generation high-resolution coupled climate model output to understand the connections between ocean circulation and dissolved compounds in the ocean.}
-  \myItem{Produced written reports, posters and presentations to communicate findings to broader communities.}
-\itemListEnd
-
-\internHeading
-  {Technical Consultant Intern, Foundation for Resilient Societies}{Cambridge, MA}{2025.01}
-\itemListStart
-  \myItem{Received in-person training by Astrapé Consulting in Strategic Energy \& Risk Valuation Mode (SERVM) software package.}
-  \myItem{Ran and debugged simulation cases for generating capacity adequacy on the US electrical grid using SERVM.}
-  \myItem{Co-led a team of 12 Electric Grid Modeling Interns to create a comprehensive internal user guide for running SERVM experiments and analyzing their output.}
-\itemListEnd
-
-\internHeading
-  {Research Assistant, Woods Hole Oceanographic Institution}{Woods Hole, MA}{2021.09 - 2023.09}
-\itemListStart
-  \myItem{Processed and analyzed 3TB+ of climate data and found significant connections between near-shore sea surface temperature and extreme California precipitation events.}
+  \myItem{Tested causes of deep ocean cooling using global MITgcm simulations, supporting NASA efforts of global ocean modeling and data assimilation.}
+  \myItem{Analyzed 40TB+ of high-resolution coupled climate model output to understand the connections between ocean circulation and dissolved chemicals in the ocean.}
+  \myItem{Produced written reports, posters, and presentations to communicate findings to broader communities.}
+    \myItem{Processed and analyzed 5TB+ of high-resolution ocean reanalysis data and found significant connections between near-shore sea surface temperature and extreme California precipitation events.}
   \myItem{Developed tools to analyze big climate data using Python and Julia.}
 \itemListEnd
 
-\internHeading
-  {Parallel Computing Summer Fellow, Los Alamos National Laboratory}{Los Alamos, NM}{2021.06 - 2021.08}
+\positionHeading[Summer Intern]
+  {Los Alamos National Laboratory}{Los Alamos, NM}{Jun 2021--Aug 2021}
 \itemListStart
-  \myItem{Implemented parallel reduced-precision capabilities within the ocean component of the Energy Exascale Earth System Model.}
-  \myItem{Found that reduced precision marginally reduced compute time (i.e. energy consumption), but at the cost of model skill.}
+  \myItem{Implemented reduced-precision capabilities within the ocean component of the Energy Exascale Earth System Model.}
+  \myItem{Found that reduced precision significantly reduced compute time but at cost of model skill.}
 \itemListEnd
 
-\internHeading
-  {Research Assistant, Institute for Pure and Applied Mathematics}{Los Angeles, CA}{2020.06 - 2020.09}
+\positionHeading[Summer Intern]
+  {Institute for Pure and Applied Mathematics}{Los Angeles, CA}{Jun 2020--Sep 2020}
 \itemListStart
-  \myItem{Co-developed Q-learning and Deep Q-learning algorithms to improve satellite network communication efficiency.}
-  \myItem{Created Monte Carlo simulations to measure efficacy of algorithms using the PyTorch and NetworkX Python packages.}
+    \myItem{Designed and implemented reinforcement learning algorithms for adaptive packet routing in satellite network simulations.}
+  \myItem{Empirical models were built in Python primarily using PyTorch and NetworkX.}
 \itemListEnd
-}
+
 
 % -------------------- PROJECTS --------------------
-\sectionBlock{
-\section{Projects}
-}{
-\projHeading
-{\textbf{xbuoy} $|$ \emph{Python, Xarray, multiprocessing, HTML, Pandas}}
-{Personal Project} {2024.09 - Present}
+\section{Personal Projects}
+\ProjectHeading{xbuoy}
 \itemListStart
-  \myItem{Developed a system to query the National Data Buoy Center and aggregate data into daily, monthly and yearly NetCDFs.}
-  \myItem{Python package can be downloaded from \textit{https://github.com/anthony-meza/xbuoy}.}
-  \myItem{Future goals include using buoy, satellite and model data to improve coverage and projections of coastal regions.}
+  \myItem{Developed a Python workflow to query the National Data Buoy Center and aggregate data into daily, monthly and yearly NetCDFs.}
 \itemListEnd
-}
+
 
 % -------------------- SKILLS --------------------
-\sectionBlock{
-\section{Technical Skills}
-}{
-\skillListStart
-\justifying
-\item \emph{Languages}: {\Courier \fontsize{11pt}{11pt}\selectfont Python}, {\Courier \fontsize{11pt}{11pt}\selectfont Julia}, {\Courier \fontsize{11pt}{11pt}\selectfont MATLAB}.
-\item \emph{Developer Tools}: Linux/Unix, Git, Github, VS Code, Google Colab.
-\skillListEnd
-}
+% \section{Technical Skills}
+% \skillListStart
+% \justifying
+% \item \emph{Languages}: { \fontsize{11pt}{11pt}\selectfont Python}, { \fontsize{11pt}{11pt}\selectfont Julia}, { \fontsize{11pt}{11pt}\selectfont MATLAB}.
+% \item \emph{Developer Tools}: Unix, Git, Github, VS Code.
+% \item \emph{Libraries}: { \fontsize{11pt}{11pt}\selectfont Xarray}, { \fontsize{11pt}{11pt}\selectfont Pandas}, { \fontsize{11pt}{11pt}\selectfont PyTorch}, { \fontsize{11pt}{11pt}\selectfont SciPy}, { \fontsize{11pt}{11pt}\selectfont NumPy}, { \fontsize{11pt}{11pt}\selectfont Matplotlib}, { \fontsize{11pt}{11pt}\selectfont Scikit-learn}, { \fontsize{11pt}{11pt}\selectfont JAX}, { \fontsize{11pt}{11pt}\selectfont Keras}, { \fontsize{11pt}{11pt}\selectfont Tensorflow}.
+% \skillListEnd
 
 \end{document}
