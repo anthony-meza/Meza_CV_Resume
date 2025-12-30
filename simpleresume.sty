@@ -13,7 +13,6 @@
 \usepackage{ragged2e}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\pdfstringdefDisableCommands{\let\\\space}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
@@ -64,19 +63,7 @@
   \vspace{-6pt}\bfseries\raggedright\fontsize{14.5pt}{14.5pt}\selectfont
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Allow manual line breaks in section titles to be optional
-\newcommand{\sectionLineBreak}{\space\allowbreak}
-\makeatletter
-\let\oldsection\section
-\newcommand{\sectionFmt}[1]{\begingroup\let\\\sectionLineBreak #1\endgroup}
-\renewcommand{\section}{%
-  \@ifstar{\sectionStar}{\sectionNoStar}%
-}
-\newcommand{\sectionStar}[1]{\oldsection*{\sectionFmt{#1}}}
-\newcommand{\sectionNoStar}{\@ifnextchar[{\sectionOpt}{\sectionNoOpt}}
-\newcommand{\sectionOpt}[2]{\oldsection[\sectionFmt{#1}]{\sectionFmt{#2}}}
-\newcommand{\sectionNoOpt}[1]{\oldsection{\sectionFmt{#1}}}
-\makeatother
+
 
 % -------------------------
 % Header commands (CV.tex-compatible)
@@ -103,11 +90,11 @@
 \makeatother
 
 % Section blocks
-\newcommand{\sectionBlock}[2]{%
-  #1%
-  \par
-  #2%
-}
+% \newcommand{\sectionBlock}[2]{%
+%   #1%
+%   \par
+%   #2%
+% }
 
 % Consistent spacing after heading blocks
 \newcommand{\headingGap}{1pt}
@@ -125,7 +112,7 @@
   \end{tabular*}\vspace{\headingGap}
 }
 
-\newcommand{\internHeading}[4][]{
+\newcommand{\positionHeading}[4][]{
   \begin{tabular*}{0.97\textwidth}[t]{@{}>{\raggedright\arraybackslash}p{\headingLeftCol}@{\hspace{\headingMidGap}}>{\raggedleft\arraybackslash}p{\headingRightCol}@{}}
     \textbf{#2} & #4 \\
     \ifx&#1& & \textit{\small #3} \\
@@ -150,8 +137,8 @@
 \newcommand{\pubItem}[1]{%
   \item \begin{minipage}[t]{\linewidth}\raggedright\itemFont #1\end{minipage}%
 }
-\newcommand{\awardListStart}{\begin{itemize}[leftmargin=0.15in, label={\raisebox{0.25ex}{\tiny\textbullet}}, itemsep=0.5\baselineskip]}
-\newcommand{\awardListEnd}{\end{itemize}}
+\newcommand{\ListStart}{\begin{itemize}[leftmargin=0.15in, label={\raisebox{0.25ex}{\tiny\textbullet}}, itemsep=0.5\baselineskip]}
+\newcommand{\ListEnd}{\end{itemize}}
 \newcommand{\skillListStart}{\begin{itemize}[leftmargin=0pt, label={}, itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt]}
 \newcommand{\skillListEnd}{\end{itemize}\vspace{-11pt}}
 \newcommand{\itemListStart}{\begingroup\setstretch{1.15}\interlinepenalty=10000\clubpenalty=10000\widowpenalty=10000\begin{itemize}[itemsep=0.15\baselineskip, topsep=0pt, parsep=0pt, partopsep=0pt]}
