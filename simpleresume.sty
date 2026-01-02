@@ -68,9 +68,13 @@
 \renewcommand{\justifying}{\raggedright}
 
 % Sections formatting
+% \titleformat{\section}{
+%   \vspace{-6pt}\bfseries\raggedright\fontsize{12.5pt}{12.5pt}\selectfont
+% }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 \titleformat{\section}{
-  \vspace{-6pt}\bfseries\raggedright\fontsize{12.5pt}{12.5pt}\selectfont
+  \vspace{-6pt}\raggedright\fontsize{13.0pt}{13.0pt}\selectfont
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
 
 
 
@@ -108,42 +112,35 @@
 % Consistent spacing after heading blocks
 \newcommand{\headingGap}{1pt}
 \newcommand{\headingGapBottom}{1\headingGap}
-\newcommand{\headingLeftCol}{0.72\textwidth}
+\newcommand{\headingLeftCol}{0.70\textwidth}
 \newcommand{\headingMidGap}{0.02\textwidth}
-\newcommand{\headingRightCol}{0.23\textwidth}
+\newcommand{\headingRightCol}{0.28\textwidth}
 \newcommand{\headingRightMargin}{0.03\textwidth}
 
 % Headings
 \newcommand{\eduHeading}[4]{
-  \begin{tabular*}{0.97\textwidth}[t]{@{}p{\headingLeftCol}@{\hspace{\headingMidGap}}p{\headingRightCol}@{}}
-    \parbox[t]{\headingLeftCol}{\raggedright\textbf{#1} \\ \textit{#3}} &
-    \parbox[t]{\headingRightCol}{\raggedleft #2 \\ \textit{\small #4}} \\
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \fontsize{11.0pt}{11.0pt}\selectfont\textbf{#1} & \fontsize{11.0pt}{11.0pt}\selectfont#2 \\
+    \fontsize{11pt}{11pt}\selectfont\textit{#3} & \fontsize{11pt}{11pt}\selectfont\textit{#4}
   \end{tabular*}\vspace{\headingGap}
 }
 
-\newcommand{\positionHeading}[4][]{
-  \begin{tabular*}{0.97\textwidth}[t]{@{}>{\raggedright\arraybackslash}p{\headingLeftCol}@{\hspace{\headingMidGap}}>{\raggedleft\arraybackslash}p{\headingRightCol}@{}}
-    \textbf{#2} & #4 \\
-    \ifx&#1& & \textit{#3} \\
-    \else \textit{#1} & \textit{#3} \\
-    \fi
-  \end{tabular*}\vspace{\headingGap}
-}
+\newcommand{\positionHeading}[4][]{  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}    \fontsize{11.5pt}{11.5pt}\selectfont\textbf{#2} & \fontsize{11.5pt}{11.5pt}\selectfont#4 \\    \if\relax\detokenize{#1}\relax      & \fontsize{11pt}{11pt}\selectfont\textit{#3} \\    \else      \fontsize{11pt}{11pt}\selectfont\textit{#1} & \fontsize{11pt}{11pt}\selectfont\textit{#3} \\    \fi  \end{tabular*}\vspace{\headingGap}}
 
 \newcommand{\ProjectHeading}[1]{
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{#1} & \\
   \end{tabular*}\vspace{\headingGap}
 }
 
 \newcommand{\projHeading}[3]{
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \small\textbf{#1} & \\
     \textit{\small#2} & \textit{\small #3} \\
   \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\itemFont}{\small}
+\newcommand{\itemFont}{\normalsize}
 
 % Lists
 \newcommand{\pubListStart}{\begin{itemize}[leftmargin=0.15in, rightmargin=\headingRightMargin, label={\raisebox{0.25ex}{\tiny\textbullet}}, itemsep=0.5\baselineskip, parsep=0pt, topsep=0pt, partopsep=0pt]\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000}
@@ -161,7 +158,7 @@
 
 % Items
 \newcommand{\myItem}[1]{
-  \item\small{
+  \item\fontsize{11pt}{11pt}\selectfont{
     {#1 \vspace{-2pt}}
   }
 }
@@ -176,7 +173,7 @@
 
 \newcommand{\entryItem}[3]{%
   \item
-  \begin{tabular*}{0.97\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+  \begin{tabular*}{\linewidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
     \itemFont #1 & \textit{#3} \\
     \if\relax\detokenize{#2}\relax\else
       \textit{#2} & \\
