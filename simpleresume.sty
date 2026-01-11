@@ -86,18 +86,17 @@
 \newcommand{\headerName}[1]{\def\@headerName{#1}}
 \newcommand{\headerTitle}[1]{%
   \begin{center}
-    {\HeaderFont \fontsize{20pt}{20pt}\selectfont \textsc{\@headerName}} \\[0pt]
-    {\HeaderFont \fontsize{12.5pt}{12.5pt}\selectfont \textsc{#1}}
+    \begin{tabular}{c}
+      {\HeaderFont \fontsize{20pt}{20pt}\selectfont \textsc{\@headerName}} \\
+      {\HeaderFont \fontsize{12.5pt}{12.5pt}\selectfont \textsc{#1}} \\
+      \@headerContact
+    \end{tabular}
   \end{center}
-  \vspace{-10pt}
-  \@headerContact
 }
 \newcommand{\headerContact}[3]{%
   \def\@headerContact{%
-    \vspace{-8pt}
-    \begin{center}\small
-      {\HeaderFont #1} \hspace{0.1em} $|$ \hspace{0.1em} \href{mailto:#2}{#2} \hspace{0.1em} $|$ \hspace{0.1em} \href{https://#3}{#3}
-    \end{center}
+    \small
+    {\HeaderFont #1} \hspace{0.1em} \textbullet \hspace{0.1em} \href{mailto:#2}{#2} \hspace{0.1em} \textbullet \hspace{0.1em} \href{https://#3}{#3}
   }
 }
 \makeatother
@@ -143,13 +142,13 @@
 \newcommand{\itemFont}{\normalsize}
 
 % Lists
-\newcommand{\pubListStart}{\begin{itemize}[leftmargin=0.15in, rightmargin=\headingRightMargin, label={\raisebox{0.25ex}{\tiny\textbullet}}, itemsep=0.5\baselineskip, parsep=0pt, topsep=0pt, partopsep=0pt]\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000}
+\newcommand{\pubListStart}{\begin{itemize}[leftmargin=0.15in, rightmargin=\headingRightMargin, itemsep=0.5\baselineskip, parsep=0pt, topsep=0pt, partopsep=0pt]\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000}
 \newcommand{\pubListEnd}{\end{itemize}}
 % Publication item boxed to the list width
 \newcommand{\pubItem}[1]{%
   \item \begin{minipage}[t]{\linewidth}\raggedright\itemFont #1\end{minipage}%
 }
-\newcommand{\ListStart}{\begin{itemize}[leftmargin=0.15in, label={\raisebox{0.25ex}{\tiny\textbullet}}, itemsep=0.5\baselineskip]}
+\newcommand{\ListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=0.5\baselineskip]}
 \newcommand{\ListEnd}{\end{itemize}}
 \newcommand{\skillListStart}{\begin{itemize}[leftmargin=0pt, label={}, itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt]}
 \newcommand{\skillListEnd}{\end{itemize}\vspace{-11pt}}
