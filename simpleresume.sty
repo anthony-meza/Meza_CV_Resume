@@ -42,7 +42,10 @@
 \newcommand{\HeaderFont}{\rmfamily}
 
 % Emph style
-\renewcommand{\emph}[1]{\textbf{\fontsize{11pt}{11pt}\selectfont #1}}
+\renewcommand{\emph}[1]{\textbf{\normalsize #1}}
+\definecolor{ResumeTextGray}{gray}{0.15}
+\definecolor{SectionMaroonGray}{RGB}{128, 42, 50}
+\AtBeginDocument{\color{ResumeTextGray}}
 
 % Page style
 \pagestyle{fancy}
@@ -68,12 +71,10 @@
 \renewcommand{\justifying}{\raggedright}
 
 % Sections formatting
-% \titleformat{\section}{
-%   \vspace{-6pt}\bfseries\raggedright\fontsize{12.5pt}{12.5pt}\selectfont
-% }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 \titleformat{\section}{
-  \vspace{-6pt}\raggedright\fontsize{13.0pt}{13.0pt}\selectfont
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \raggedright\Large\bfseries\color{SectionMaroonGray}
+}{}{0em}{\MakeUppercase}
+\titlespacing*{\section}{0pt}{0.6\baselineskip}{0.25\baselineskip}
 
 
 
@@ -84,19 +85,24 @@
 \def\@headerName{}
 \def\@headerContact{}
 \newcommand{\headerName}[1]{\def\@headerName{#1}}
+\newcommand{\contactSep}{\unskip\hspace{0.25em}\textbullet\hspace{0.25em}\ignorespaces}
 \newcommand{\headerTitle}[1]{%
   \begin{center}
+    \renewcommand{\arraystretch}{1.08}%
     \begin{tabular}{c}
-      {\HeaderFont \fontsize{20pt}{20pt}\selectfont \textsc{\@headerName}} \\
-      {\HeaderFont \fontsize{12.5pt}{12.5pt}\selectfont \textsc{#1}} \\
+      {\HeaderFont \huge \textsc{\@headerName}} \\
+      \if\relax\detokenize{#1}\relax
+      \else
+        {\HeaderFont \large \textsc{#1}} \\
+      \fi
       \@headerContact
     \end{tabular}
   \end{center}
 }
-\newcommand{\headerContact}[3]{%
+\newcommand{\headerContact}[1]{%
   \def\@headerContact{%
-    \small
-    {\HeaderFont #1} \hspace{0.1em} \textbullet \hspace{0.1em} \href{mailto:#2}{#2} \hspace{0.1em} \textbullet \hspace{0.1em} \href{https://#3}{#3}
+    \normalsize
+    {\HeaderFont #1}
   }
 }
 \makeatother
@@ -119,12 +125,12 @@
 % Headings
 \newcommand{\eduHeading}[4]{
   \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
-    \fontsize{11.0pt}{11.0pt}\selectfont\textbf{#1} & \fontsize{11.0pt}{11.0pt}\selectfont#2 \\
-    \fontsize{11pt}{11pt}\selectfont\textit{#3} & \fontsize{11pt}{11pt}\selectfont\textit{#4}
+    \normalsize\textbf{#1} & \normalsize#2 \\
+    \normalsize\textit{#3} & \normalsize\textit{#4}
   \end{tabular*}\vspace{\headingGap}
 }
 
-\newcommand{\positionHeading}[4][]{  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}    \fontsize{11.5pt}{11.5pt}\selectfont\textbf{#2} & \fontsize{11.5pt}{11.5pt}\selectfont#4 \\    \if\relax\detokenize{#1}\relax      & \fontsize{11pt}{11pt}\selectfont\textit{#3} \\    \else      \fontsize{11pt}{11pt}\selectfont\textit{#1} & \fontsize{11pt}{11pt}\selectfont\textit{#3} \\    \fi  \end{tabular*}\vspace{\headingGap}}
+\newcommand{\positionHeading}[4][]{  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}    \normalsize\textbf{#2} & \normalsize#4 \\    \if\relax\detokenize{#1}\relax      & \normalsize\textit{#3} \\    \else      \normalsize\textit{#1} & \normalsize\textit{#3} \\    \fi  \end{tabular*}\vspace{\headingGap}}
 
 \newcommand{\ProjectHeading}[1]{
   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -157,7 +163,7 @@
 
 % Items
 \newcommand{\myItem}[1]{
-  \item\fontsize{11pt}{11pt}\selectfont{
+  \item\itemFont{
     {#1 \vspace{-2pt}}
   }
 }

@@ -13,7 +13,7 @@
 \begin{document}
 
 % -------------------- HEADING --------------------
-\headerContact{(714) 552-2396}{ameza98@outlook.com}{anthony-meza.github.io}
+\headerContact{Falmouth, MA 02536 \contactSep (714) 552-2396 \contactSep \href{mailto:ameza98@outlook.com}{ameza98@outlook.com} \contactSep \href{https://anthony-meza.github.io}{anthony-meza.github.io}}
 \headerName{Anthony Meza}
 \headerTitle{Ph.D. Candidate}
 
@@ -32,13 +32,13 @@
 
 \eduHeading
   {\parbox[t]{0.7\textwidth}{Massachusetts Institute of Technology}}{Cambridge, MA}
-  {Ph.D. in Physical Oceanography}{Expected 2026}
+  {Ph.D. in Physical Oceanography}{2021 - 2026 (Expected)}
 \eduHeading
   {University of California, Irvine}{Irvine, CA}
   {B.S. in Mathematics - Concentration in Data Science}{2018--2021}
-\eduHeading
-  {Fullerton College}{Fullerton, CA}
-  {A.S. in Mathematics}{2016--2018}
+% \eduHeading
+%   {Fullerton College}{Fullerton, CA}
+%   {A.S. in Mathematics}{2016--2018}
 
 % -------------------- RESEARCH EXPERIENCE --------------------
 \section{Experience}
@@ -46,49 +46,57 @@
 \positionHeading[Graduate Research Assistant]
   {Woods Hole Oceanographic Institution}{Woods Hole, MA}{Sep 2021--Present}
 \itemListStart
-  \myItem{Designed and ran global ocean simulations using the MIT General Circulation Model (MITgcm) to test mechanisms controlling deep ocean heat content and circulation}
-\myItem{Evaluated high-resolution coupled climate models to quantify the impacts of Antarctic sea ice melt on global ocean circulation and tracer distributions}
-\myItem{Analyzed ocean reanalysis data and found a statistical relationship between near-shore sea surface temperature variability and extreme California precipitation events}
-\myItem{Developed Python and Julia tools for processing and analysis of ocean model and observational data in high-performance computing (HPC) environments}
+\myItem{Used numerical ocean and climate models to investigate mechanisms controlling ocean circulation and heat transport}
+\myItem{Analyzed satellite products using statistical methods (i.e., multivariate, time series, and spatial analysis), to identify links between coastal sea surface temperatures and extreme California precipitation events}
+\myItem{Developed Python and Julia tools to process, visualize, and interpret terrabytes of climate data in high-performance computing environments}
 \itemListEnd
 
 \positionHeading[Technical Consultant]
-  {Foundation for Resilient Societies}{Cambridge, MA}{Jan 2025}
+  {Foundation for Resilient Societies}{Cambridge, MA}{Jan 2025-Feb 2025}
 \itemListStart
   % \myItem{Received in-person training from Astrapé Consulting on the Strategic Energy \& Risk Valuation Model (SERVM) for electric grid capacity adequacy analysis}
 \myItem{Ran and debugged Strategic Energy \& Risk Valuation Model (SERVM) simulations to assess U.S. electrical grid capacity adequacy under varying generation scenarios (e.g., solar adoption).}
-\myItem{Led a team of 12 undergraduate electric grid modeling interns to develop an internal user guide for running SERVM experiments and interpreting model output.}
+\myItem{Led a team of 12 undergraduate electric grid modeling interns for 4 weeks to develop an internal user guide for running SERVM experiments and interpreting model output.}
 \itemListEnd
 
-\positionHeading[Research Intern]
+\positionHeading[Parallel Computing Summer Fellow]
   {Los Alamos National Laboratory}{Los Alamos, NM}{Jun 2021--Aug 2021}
 \itemListStart
-  \myItem{Implemented and evaluated reduced-precision in the Energy Exascale Earth System Model (E3SM) to reduce computational cost and energy consumption in global climate simulations}
+  \myItem{Implemented and evaluated reduced-precision in the Energy Exascale Earth System Model (E3SM), written in Fortran, to reduce computational cost and energy consumption in global climate simulations}
 \itemListEnd
 
-\positionHeading[Research Intern]
-  {\parbox[t]{0.7\textwidth}{Institute for Pure and Applied Mathematics {\&}\\The Aerospace Corporation}}{Los Angeles, CA}{Jun 2020--Sep 2020}
-\itemListStart
-    \myItem{Designed and implemented reinforcement learning–based methods for adaptive packet routing in satellite network simulations, implemented in Python using PyTorch}
-\itemListEnd
+% \positionHeading[Research Intern]
+%   {\parbox[t]{0.7\textwidth}{Institute for Pure and Applied Mathematics {\&}\\The Aerospace Corporation}}{Los Angeles, CA}{Jun 2020--Sep 2020}
+% \itemListStart
+%     \myItem{Implemented reinforcement learning methods in PyTorch for adaptive packet routing in satellite network simulations}
+% \itemListEnd
 
 % -------------------- PUBLICATIONS --------------------
-\section{Publications}
+% \section{Publications}
 
-\pubListStart
-\justifying
-\pubItem{\textbf{Meza, A.}, \& Gebbie, G. (2025). Wind-driven mid-depth Pacific cooling in a dynamically consistent ocean state estimate. \textit{Journal of Geophysical Research: Oceans}. doi.org/10.1029/2025JC022462}
+% \pubListStart
+% \justifying
+% \pubItem{\textbf{Meza, A.}, \& Gebbie, G. (2025). Wind-driven mid-depth Pacific cooling in a dynamically consistent ocean state estimate. \textit{Journal of Geophysical Research: Oceans}. doi.org/10.1029/2025JC022462}
 % \item \textbf{Meza, A.}, Drake, H. \& Gebbie, G. \textit{(In Prep)}. Projected Changes in Dense Shelf Water and their Abyssal Expression.
 % \item \textbf{Meza, A.}, et al. \textit{(In Prep)}. 
 % Detection of .
 % \item \textbf{Meza, A.}, Bhuyan, P., Zheng, Z. \& Gebbie, G. \textit{(In Prep)}. Passive and Dynamic Contributions to Mean Ocean Temperature during the Last Glacial Maximum.
-\pubListEnd
+% \pubListEnd
 
 % -------------------- PROJECTS --------------------
-\section{Personal Projects}
-\ProjectHeading{xbuoy}
+\section{Projects}
+
+\positionHeading[Kaggle Competition Participant]
+  {Atmospheric Physics using AI}{Remote}{Apr 2024--Jul 2024}
 \itemListStart
-\myItem{Developed \textit{xbuoy}, a Python workflow to query National Data Buoy Center (NDBC) and aggregate irregularly sampled data into commonly used Earth science data formats (e.g., NetCDF).}
+    \myItem{Ranked 230/694 on the public leaderboard for emulating subgrid-scale atmospheric processes}
+    \myItem{Developed machine learning architectures with physical constraints in PyTorch and TensorFlow}
+    \myItem{Optimized data pipelines for GPU-accelerated training, significantly increasing model throughput}
+\itemListEnd
+
+\positionHeading[Personal Project]{xbuoy}{}{}
+\itemListStart
+\myItem{Developed \textit{xbuoy}, a Python package for querying National Data Buoy Center observations and converting irregularly sampled buoy data to NetCDF and Zarr}
 \itemListEnd
 
 
@@ -97,8 +105,8 @@
 \skillListStart
 \justifying
 \item \emph{Languages}: \textit{Programming}: Python, Julia, MATLAB; \textit{Human}: English, Spanish
-\item \emph{Scientific Computing}: NumPy, SciPy, xarray, Pandas,  Optimization.jl, JuMP.jl, scikit-learn, PyTorch
-\item \emph{HPC \& Dev Tools}: Unix/Linux, OpenMPI, HPC job schedulers (e.g., Slurm), Dask, Git, GitHub
+\item \emph{Scientific Computing}: Scientific Python (xarray, PyTorch, Tensorflow) and Julia (Optimization.jl, JuMP.jl)
+\item \emph{HPC \& Dev Tools}: Unix, HPC job schedulers (e.g., Slurm), Dask, Git, GitHub
 \skillListEnd
 
 
